@@ -15,24 +15,37 @@ export class Service{
     }
 
     // Create Post
-    async createPost({title, slug, content, featuredImage, status, userId}){
-        try {
-            return await this.databases.createDocument(
-                conf.appWrite_Database_ID,
-                conf.appWrite_collection_ID,
-                slug,
-                {
-                    title,
-                    content,
-                    featuredImage,
-                    status,
-                    userId,
-                }
-            )
-        } catch (error) {
-            console.log("Appwrite serive :: createPost :: error", error);
-        }
+async createPost({
+    title,
+    slug,
+    content,
+    featuredImage,
+    status,
+    userId
+}) {
+    try {
+        console.log("USER ID:", userId);
+
+        return await this.databases.createDocument({
+            databaseId: conf.appWrite_Database_ID,
+            collectionId: conf.appWrite_collection_ID,
+            documentId: slug,
+            data: {
+                title,
+                content,
+                featuredImage,
+                status,
+                userId,
+            },
+        });
+
+    } catch (error) {
+        console.log(
+            "Appwrite service :: createPost :: error",
+            error
+        );
     }
+}
 
 
     // Update Post
@@ -127,12 +140,12 @@ export class Service{
     }
 
     // Get File Preview
-        getFilePreview(fileId){
-        return this.bucket.getFilePreview(
-            conf.appWritebucket_ID,
-            fileId
-        )
-    }
+    getFilePreview(fileId) {
+    return this.bucket.getFilePreview(
+        conf.appWritebucket_ID,
+        fileId
+    );
+}
 }
 
 const service = new Service();
