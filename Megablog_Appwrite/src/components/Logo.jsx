@@ -2,7 +2,11 @@ import React from 'react'
 
 function Logo({width = '300px'}) {
     return (
-        <h2><div className='text-black font-bolt'>@BlogVerse</div></h2>
+        <div>
+            <h1 className="text-2xl font-extrabold tracking-wide text-white">
+                @BlogVerce
+            </h1>
+        </div>
     )
 }
 

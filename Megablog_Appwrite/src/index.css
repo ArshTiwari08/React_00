@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/* ============================= */
-/* Global */
-/* ============================= */
-
 :root {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, sans-serif;
@@ -20,10 +16,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ============================= */
-/* Reset */
-/* ============================= */
-
 * {
     box-sizing: border-box;
 }
@@ -36,63 +28,25 @@ body {
     background: #fafafa;
     color: #111827;
 }
-
-/* ============================= */
-/* Root */
-/* ============================= */
-
 #root {
     width: 100%;
     min-height: 100vh;
 }
 
-/* ============================= */
-/* Headings */
-/* ============================= */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    color: #111827;
+h1,h2,h3,h4,h5,h6 {
+    /* margin: 0; */
+    /* color: #111827; */
     font-weight: 600;
 }
 
-/* ============================= */
-/* Paragraph */
-/* ============================= */
 
-p {
-    margin: 0;
-    color: #374151;
-}
-
-/* ============================= */
-/* Links */
-/* ============================= */
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ============================= */
-/* Post Card */
-/* ============================= */
 
 .post-card {
     background: #e5e7eb;
     border: 1px solid #d1d5db;
     border-radius: 14px;
-
     overflow: hidden;
-
-    box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.06);
-
+    box-shadow:0 2px 6px rgba(0, 0, 0, 0.06);
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
@@ -100,64 +54,38 @@ a {
 
 .post-card:hover {
     transform: translateY(-4px);
-
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.12);
 }
-
-/* ============================= */
-/* Post Image */
-/* ============================= */
-
 .post-card img {
     width: 100%;
     height: 180px;
-
     object-fit: cover;
     display: block;
 }
-
-/* ============================= */
-/* Post Content */
-/* ============================= */
 
 .post-card-content {
     padding: 14px 16px;
 }
 
-/* Owner */
-
 .post-owner {
     font-size: 14px;
     font-weight: 600;
-
     color: #374151;
-
     margin-bottom: 6px;
 }
 
-/* Title */
 
 .post-title {
     font-size: 18px;
     font-weight: 700;
-
     color: #111827;
-
     line-height: 1.3;
 }
-
-/* ============================= */
-/* Buttons */
-/* ============================= */
 
 button {
     font-family: inherit;
 }
-
-/* ============================= */
-/* Selection */
-/* ============================= */
 
 ::selection {
     background: #d1d5db;
