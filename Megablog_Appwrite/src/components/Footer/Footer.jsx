@@ -53,9 +53,9 @@ function Footer() {
                             <li>
                                 <Link
                                     className="text-base font-medium text-gray-900 hover:text-gray-700"
-                                    to="/all-posts"
+                                    to="/my-posts"
                                 >
-                                    All Posts
+                                    My Posts
                                 </Link>
                             </li>
 
