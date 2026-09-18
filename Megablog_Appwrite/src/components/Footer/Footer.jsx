@@ -13,7 +13,9 @@ function Footer() {
                         <div className="flex h-full flex-col justify-between">
                             <div>
                                 <div className="mb-4 inline-flex items-center">
-                                    <Logo width="100px" />
+                                    <h1 className="text-2xl font-extrabold text-white">
+                                        @BlogVerse
+                                    </h1>
                                 </div>
 
                                 <p className="max-w-md text-sm leading-6 text-gray-800">
@@ -67,7 +69,7 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                </div>
+                    </div>
                     {/* Account */}
                     <div className="w-full px-4 py-6 md:w-1/2 lg:w-2/12">
                         <div className="h-full">
@@ -125,5 +127,4 @@ function Footer() {
         </footer>
     );
 }
-
 export default Footer;

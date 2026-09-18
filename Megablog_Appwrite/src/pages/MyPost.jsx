@@ -42,9 +42,17 @@ function MyPosts() {
         return (
             <div className="w-full py-8 text-center">
                 <Container>
-                    <h1 className="text-2xl font-bold">
-                        You have not created any posts yet.
-                    </h1>
+                    <div className="flex justify-center py-10">
+                        <div className="w-full max-w-md rounded-xl bg-gray-200 p-8 text-center shadow-md border border-gray-200">
+                            <h1 className="text-2xl font-bold text-gray-900">
+                                No Posts Yet✍️
+                            </h1>
+
+                            <p className="mt-2 text-gray-500">
+                                You haven't created any posts yet. Start writing your first post!
+                            </p>
+                        </div>
+                    </div>
                 </Container>
             </div>
         );
@@ -57,8 +65,7 @@ function MyPosts() {
                     {posts.map((post) => (
                         <div
                             key={post.$id}
-                            className="p-2 w-full sm:w-1/2 lg:w-1/4"
-                        >
+                            className="p-2 w-full sm:w-1/2 lg:w-1/4">
                             <PostCard post={post} />
                         </div>
                     ))}

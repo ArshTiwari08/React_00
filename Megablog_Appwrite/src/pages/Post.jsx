@@ -23,11 +23,11 @@ export default function Post() {
     useEffect(() => {
         if (slug) {
             Service.getPost(slug).then((post) => {
-                console.log("POST FROM APPWRITE:", post);
-                console.log(
-                    "FEATURED IMAGE ID:",
-                    post?.featuredImage
-                );
+                // console.log("POST FROM APPWRITE:", post);
+                // console.log(
+                //     "FEATURED IMAGE ID:",
+                //     post?.featuredImage
+                // );
 
                 if (post) {
                     console.log(

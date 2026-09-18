@@ -45,12 +45,12 @@ function Login() {
 
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
+                        <Logo width="100%"/>
                     </span>
                 </div>
 
                 <h2 className="text-center text-2xl font-bold leading-tight">
-                    Sign in to your account
+                    Login to your account
                 </h2>
 
                 <p className="mt-2 text-center text-base text-black/60">

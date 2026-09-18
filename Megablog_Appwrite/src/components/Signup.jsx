@@ -37,12 +37,12 @@ function Signup() {
                     </div>
                     <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
                     <p className="mt-2 text-center text-base text-black/60">
-                        Already have an account?;
+                        Already have an account? 
                         <Link
                             to="/login"
                             className="font-medium text-primary transition-all duration-200 hover:underline"
                         >
-                            Sign In
+                            Login
                         </Link>
                     </p>
                     {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
@@ -75,7 +75,7 @@ function Signup() {
                         {...register("password",{
                             required :true,})}
                         />
-                        <Button type="submit" className="w-full">
+                        <Button type="submit" className="w-full w-full cursor-pointer">
                             Create Account
                         </Button>
                     </div>

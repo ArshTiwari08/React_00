@@ -12,12 +12,7 @@ function PostForm({ post }) {
     const userData = useSelector((state) => state.auth.userData);
 
     const {
-        register,
-        handleSubmit,
-        watch,
-        setValue,
-        control,
-        getValues,
+        register,handleSubmit,watch,setValue,control,getValues,
     } = useForm({
         defaultValues: {
             title: post?.title || "",
@@ -56,9 +51,9 @@ function PostForm({ post }) {
     // SUBMIT
     const submit = async (data) => {
         try {
-            console.log("USER DATA:", userData);
-            console.log("USER ID:", userData?.$id);
-            console.log("USER NAME:", userData?.name);
+            // console.log("USER DATA:", userData);
+            // console.log("USER ID:", userData?.$id);
+            // console.log("USER NAME:", userData?.name);
 
             // UPDATE EXISTING POST
             if (post) {
@@ -84,10 +79,8 @@ function PostForm({ post }) {
                     if (file && post.featuredImage) {
                         await service.deleteFile(post.featuredImage);
                     }
-
                     navigate(`/post/${dbPost.$id}`);
                 }
-
                 return;
             }
 
@@ -98,12 +91,12 @@ function PostForm({ post }) {
             }
 
             if (!userData?.name) {
-                console.log("User name is not available");
+                // console.log("User name is not available");
                 return;
             }
 
             if (!data.image || !data.image[0]) {
-                console.log("Please select an image");
+                // console.log("Please select an image");
                 return;
             }
 
@@ -114,7 +107,7 @@ function PostForm({ post }) {
                 return;
             }
 
-            console.log("UPLOADED FILE:", file);
+            // console.log("UPLOADED FILE:", file);
 
             const dbPost = await service.createPost({
                 title: data.title,
@@ -127,7 +120,7 @@ function PostForm({ post }) {
             });
 
             if (dbPost) {
-                console.log("POST CREATED:", dbPost);
+                // console.log("POST CREATED:", dbPost);
                 navigate(`/post/${dbPost.$id}`);
             }
         } catch (error) {
@@ -199,7 +192,7 @@ function PostForm({ post }) {
                 <Button
                     type="submit"
                     bgColor={post ? "bg-green-500" : undefined}
-                    className="w-full"
+                    className="w-full cursor-pointer"
                 >
                     {post ? "Update" : "Submit"}
                 </Button>
