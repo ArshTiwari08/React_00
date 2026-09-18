@@ -4,7 +4,7 @@ function Logo({width = '300px'}) {
     return (
         <div>
             <h1 className="text-2xl font-extrabold tracking-wide text-white">
-                @BlogVerce
+                @BlogVerse
             </h1>
         </div>
     )

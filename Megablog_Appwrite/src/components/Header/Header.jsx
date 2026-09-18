@@ -25,8 +25,8 @@ function Header() {
         active: !authStatus,
     },
     {
-        name: "All Posts",
-        slug: "/all-posts",
+        name: "My Posts",
+        slug: "/my-posts",
         active: authStatus,
     },
     {
@@ -42,7 +42,7 @@ function Header() {
                 <nav className="flex">
                     <div className="mr-4">
                         <Link to='/'>
-                        <Logo width="80px"/>
+                        <Logo width="100px" height="80px"/>
                         </Link>
                     </div>
                     <ul className="flex ml-auto">
