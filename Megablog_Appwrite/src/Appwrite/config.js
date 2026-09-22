@@ -21,18 +21,9 @@ export class Service {
         this.bucket = new Storage(this.client);
     }
 
-    // =========================
     // CREATE POST
-    // =========================
-
     async createPost({
-        title,
-        slug,
-        content,
-        featuredImage,
-        status,
-        userId,
-        ownerName
+        title,slug,content,featuredImage,status,userId,ownerName
     }) {
         try {
             console.log("USER ID:", userId);
@@ -43,12 +34,7 @@ export class Service {
                 conf.appWrite_collection_ID,
                 slug,
                 {
-                    title,
-                    content,
-                    featuredImage,
-                    status,
-                    userId,
-                    ownerName
+                    title,content,featuredImage,status,userId,ownerName
                 }
             );
 
@@ -61,18 +47,12 @@ export class Service {
             return false;
         }
     }
-
-    // =========================
     // UPDATE POST
-    // =========================
 
     async updatePost(
         slug,
         {
-            title,
-            content,
-            featuredImage,
-            status
+            title,content,featuredImage,status
         }
     ) {
         try {
@@ -81,10 +61,7 @@ export class Service {
                 conf.appWrite_collection_ID,
                 slug,
                 {
-                    title,
-                    content,
-                    featuredImage,
-                    status
+                    title,content,featuredImage,status
                 }
             );
 
@@ -97,10 +74,7 @@ export class Service {
             return false;
         }
     }
-
-    // =========================
     // DELETE POST
-    // =========================
 
     async deletePost(slug) {
         try {
@@ -122,10 +96,7 @@ export class Service {
         }
     }
 
-    // =========================
     // GET SINGLE POST
-    // =========================
-
     async getPost(slug) {
         try {
             return await this.databases.getDocument(
@@ -144,10 +115,7 @@ export class Service {
         }
     }
 
-    // =========================
     // GET ALL POSTS
-    // =========================
-
     async getPosts(
         queries = [Query.equal("status", "active")]
     ) {
@@ -168,9 +136,7 @@ export class Service {
         }
     }
 
-    // =========================
     // UPLOAD FILE
-    // =========================
 
     async uploadFile(file) {
         try {
@@ -197,10 +163,7 @@ export class Service {
             return false;
         }
     }
-
-    // =========================
     // DELETE FILE
-    // =========================
 
     async deleteFile(fileId) {
         try {
@@ -220,11 +183,8 @@ export class Service {
             return false;
         }
     }
-
-    // =========================
+    
     // GET FILE VIEW
-    // =========================
-
     getFileView(fileId) {
         return this.bucket.getFileView(
             conf.appWritebucket_ID,
