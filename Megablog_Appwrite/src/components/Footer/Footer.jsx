@@ -19,9 +19,9 @@ function Footer() {
                                 </div>
 
                                 <p className="max-w-md text-sm leading-6 text-gray-800">
-                                    BlogVerce is a modern blogging platform designed to give people a simple and engaging space to share their ideas, knowledge, experiences, and stories.
+                                    BlogVerse is a modern blogging platform designed to give people a simple and engaging space to share their ideas, knowledge, experiences, and stories.
                                     <br/>
-                                    Write. Share. Discover. — Welcome❤️to BlogVerce.......
+                                    Write. Share. Discover. — Welcome❤️to BlogVerse.......
                                 </p>
                             </div>
 
