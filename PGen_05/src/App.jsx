@@ -20,7 +20,7 @@ function App(){
     setPassword(pass)
   },[length, numberAllowed, charAllowed, setPassword])
 
-  // Copy function 
+  // Copy function
   const copyPasswordToClipboard = useCallback(()=>{
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 999);
