@@ -3,16 +3,32 @@ import { useNavigate } from "react-router-dom"
 
 
 function Login() {
-    const Navigate = useNavigate()
-    const [email, setEmail] = useState("")
 
-    const handleSubmit = (e) => {
-    e.preventDefault()
+    const[ email, setEmail] = useState("")
+    const[password,setPassword] = useState("")
+    const navigate = useNavigate()
 
-    alert(`You logged in successfully with ${email}`)
+    const handleSubmit =(e)=>{
+        e.preventDefault();
 
-    Navigate('/Weather')
-}
+        // checkt the correct credentials
+        const userdata = localStorage.getItem("user")
+        if(userdata){
+            const user = JSON.parse(userdata)
+
+            if(user.email === email
+                &&
+                user.password === password){
+                    localStorage.setItem("isLoggedIn", "true")
+                    alert("You are successFully Login")
+                    navigate("/weather")
+                }
+            else{
+                alert("invalid Credential")
+            }
+        }
+    }
+
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -50,6 +66,8 @@ function Login() {
                 <input
                 type="password"
                 placeholder="Enter your password"
+                value={password}
+                onChange={(e)=>setPassword(e.target.value)}
                 required
                 className="w-full border border-gray-300 rounded-md px-3 py-2"
                 />
@@ -69,5 +87,4 @@ function Login() {
         </div>
     )
 }
-
 export default Login

@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements
 } from "react-router-dom"
+import ProtectedRoute from "./Component/ProtectedRoute.jsx"
 
 
 const router = createBrowserRouter(
@@ -20,7 +21,10 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}/>
       <Route path='Login' element={<Login/>}/>
       <Route path='register' element={<Register/>}/>
-      <Route path='weather' element={<Weather/>}/>
+      <Route element ={<ProtectedRoute/>}>
+        <Route path="weather" element={<Weather/>}/>
+      </Route>
+
     </Route>
   )
 )
