@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import AddTodo from './components/AddTodo'
-import Todos from './components/Todo'
+import Todos from './components/todo'
+import AddTodo from './components/addTodo'
 
 function App() {
   
   return (
     <>
-      <h1>Learn about redux toolkit</h1>
+      <h1>Simple TODO using  REACT_REDUX</h1>
       <AddTodo />
       <Todos />
     </>
